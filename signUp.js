@@ -9,14 +9,17 @@ import {
 // import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCchxwGvEo1-iWcPzpolujx---rIYLWM8Q",
-    authDomain: "bustani-1a849.firebaseapp.com",
-    databaseURL: "https://bustani-1a849-default-rtdb.firebaseio.com",
-    projectId: "bustani-1a849",
-    storageBucket: "bustani-1a849.appspot.com",
-    messagingSenderId: "230621269575",
-    appId: "1:230621269575:web:50ddeedbd90de683e2eb62"
+    apiKey: "AIzaSyBu7ow3Sa_niFT7xH50fKVrBWVLKJBefMU",
+    authDomain: "royalbustani-3ea13.firebaseapp.com",
+    projectId: "royalbustani-3ea13",
+    storageBucket: "royalbustani-3ea13.appspot.com",
+    messagingSenderId: "540706047243",
+    appId: "1:540706047243:web:47d3dacb90fff64fdc8e0e",
+    measurementId: "G-NLEG1VT0W8"
 };
+
+
+
 const app = initializeApp(firebaseConfig);
 // const database = getDatabase(app);
 const auth = getAuth();
