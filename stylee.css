@@ -76,9 +76,9 @@ img {
 
 }
 
-img:hover {
+/*img:hover {
     transform: scale(1.5);
-}
+}*/
 
 #navbar {
     display: flex;
@@ -181,6 +181,65 @@ img:hover {
 #testimonials {
     text-align: center;
     margin-top: 20px;
+
+}
+
+#testimonials .rentals {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 20px;
+    width: 100%;
+
+}
+
+#testimonials .rentals .rentals1 {
+    width: 49%;
+    height: fit-content;
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 0px;
+    margin-left: 0%
+}
+
+#testimonials .rentals .rentals1 img {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 0px;
+    margin-left: 0%;
+    padding: 10px;
+}
+
+#testimonials .rentals .text {
+    width: 49%;
+    height: fit-content;
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 0px;
+    margin-left: 0%
+}
+
+#testimonials .rentals .text .text-content {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 0px;
+    margin-left: 0%;
+    padding: 70px 10px;
+}
+
+
+#testimonials .rentals .text .star {
+    padding-bottom: 0px;
+}
+
+#testimonials .rentals .text .star i {
+    font-size: 12px;
+    color: rgb(243, 181, 25);
 }
 
 #testimonials .pro-container {
@@ -241,6 +300,24 @@ img:hover {
 #testimonials .pro .des i {
     font-size: 12px;
     color: rgb(243, 181, 25);
+}
+
+.about1 {
+    width: 80%;
+    padding-left: 50px;
+    margin: 70px 100px;
+    align-items: center;
+    font-weight: 700;
+    background-color: #a8c2e5;
+    height: 200px;
+    border-radius: 20px;
+    padding-top: 30px;
+
+}
+
+.aboutinfo1 {
+    font-weight: 700;
+
 }
 
 
@@ -517,6 +594,7 @@ col-75 {
 }
 
 footer {
+    padding-top: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -568,7 +646,7 @@ footer .copyright {
     text-align: center;
 }
 
-@media only screen and(max-width: 768px) {
+@media(max-width: 768px) {
     .section-pl {
         padding: 20px;
 
