@@ -9,11 +9,13 @@
         <link rel="stylesheet" href="./assets/css/all.css">
         <link rel="stylesheet" href="stylee.css">
 
+
+
     </head>
 
     <body>
         <section id="header">
-            <a href="home.html"><img src="img/logo.jpeg"></a>
+            <a href="home.html"><img class="img-logo" src="img/logo.jpeg"></a>
             <div>
                 <ul id="navbar">
                     <li class="active"><a href="home.html">HOME</a></li>
@@ -84,11 +86,13 @@
             </div>
         </section>
 
+        <div id="map" style="width:100%;height:400px;">My map will go here</div>
+
 
 
         <footer class="section-pl">
             <div class="col">
-                <img src="img/logo.jpeg" alt="">
+                <img class="img-logo" src="img/logo.jpeg" alt="">
                 <h4>Contact</h4>
                 <p><strong>Address:</strong>Nairobi 111001,kasarani-hunters</p>
                 <p><strong>phone:</strong>+254790143938</p>
@@ -129,6 +133,18 @@
             </div>
 
         </footer>
+        <script>
+            function myMap() {
+                var mapCanvas = document.getElementById("map")
+                var mapOptions = {
+                    center: new google.maps.LatLng(-1.2284575, 36.9158417), zoom: 10
+                };
+                var position = { lat: -1.2284575, lng: 36.9158417 };
+                var map = new google.maps.Map(mapCanvas, mapOptions)
+                let marker = new google.maps.Marker({ position, map })
+            }
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?sensor=false&callback=myMap"></script>
 
     </body>
 
