@@ -5,6 +5,11 @@ import {
     getAuth,
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
+    GoogleAuthProvider,
+    signInWithRedirect,
+    getRedirectResult,
+    signInWithPopup,
+    signOut,
 } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
 // import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
 
@@ -116,6 +121,31 @@ submitButton.addEventListener("click", function () {
             window.alert("Error occurred. Try again.");
         });
 });
+
+const signInWithGoogle = () => {
+    //THE POP-UP METHOD
+    signInWithPopup(auth, provider)
+        .then((result) => {
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            const credential = GoogleAuthProvider.credentialFromResult(result);
+            const token = credential.accessToken;
+
+            const user = result.user;
+
+            window.alert("Success! Welcome back " + user.displayName);
+            window.location = "./dashboard.html";
+            // ...
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            const email = error.customData.email;
+
+            const credential = GoogleAuthProvider.credentialFromError(error);
+        });
+};
+
+signInWithGoogle.addEventListener("click", signInWithGoogle);
 
 signupButton.addEventListener("click", () => {
     main.style.display = "none";
