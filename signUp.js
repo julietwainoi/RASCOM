@@ -122,7 +122,7 @@ submitButton.addEventListener("click", function () {
         });
 });
 
-const signInWithGoogle = () => {
+/*const signInWithGoogle = () => {
     //THE POP-UP METHOD
     signInWithPopup(auth, provider)
         .then((result) => {
@@ -143,9 +143,9 @@ const signInWithGoogle = () => {
 
             const credential = GoogleAuthProvider.credentialFromError(error);
         });
-};
+};*/
 
-signInWithGoogle.addEventListener("click", signInWithGoogle);
+//signInWithGoogle.addEventListener("click", signInWithGoogle);
 
 signupButton.addEventListener("click", () => {
     main.style.display = "none";
