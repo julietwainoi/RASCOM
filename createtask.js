@@ -1,4 +1,3 @@
-
 const firebaseConfig = {
     apiKey: "AIzaSyBu7ow3Sa_niFT7xH50fKVrBWVLKJBefMU",
     authDomain: "royalbustani-3ea13.firebaseapp.com",
@@ -79,3 +78,42 @@ function deleteTask(code) {
 
 
 }
+//codefor  COUNTRIES API 
+
+function getCountry(name) {
+    const request = new XMLHttpRequest();
+    request.open('GET', `https://restcountries.com/v3.1/name/${name}`);
+
+
+    request.addEventListener("load", function () {
+        if (request.status === 200) { // Check if the request was successful.
+            const [data] = JSON.parse(this.responseText);
+
+            // Create the HTML content for displaying country information.
+            const html = `
+                <div class="country">
+                    <img class="country_img" src="${data.flags.png}">
+                    <div class="content">
+                        <h3 class="country-name">${data.name.common}</h3>
+                        <h4>${data.region}</h4>
+                        <p>Population: ${data.population}</p>
+                        <p>Capital: ${data.capital[0]}</p>
+                        <p>Language: ${Object.values(data.languages).join(', ')}</p>
+                    </div>
+                </div>`;
+
+            // Insert the HTML content into an element with id 'createdata'.
+            document.getElementById('createdata').insertAdjacentHTML('afterend', html);
+        } else {
+            console.error('Failed to fetch country data.');
+        }
+    });
+
+    request.send();
+}
+
+getCountry('kenya');
+
+
+
+
